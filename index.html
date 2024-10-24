@@ -16,38 +16,38 @@
 <body>
 
 
-    <div class="">
-        <h1 class="text-4xl mb-4 underline">To-do List</h1>
-    
-      
-      <p id="summary" class="text-gray-500 mb-4">0 Total, 0 Completed, 0 Pending</p>
-    
-     
-      <div class="">
-        <input id="todo-input" type="text" placeholder="Add your task ..." class="p-2 border rounded-l-lg  text-lg focus:outline-none w-[350px]">
-        <button id="add-btn" class="bg-teal-500 text-white px-6 py-2 rounded-r-lg text-lg hover:bg-teal-600 focus:outline-none">
-            <i class="fa-solid fa-pencil"></i>
-        </button>
-      </div>
-    
-      
-      <table class="task-list w-full max-w-2xl text-lg">
-        <thead>
-          <tr class="text-left font-bold border-b">
-            <th>Num</th>
-            <th>Task</th>
-            <th>Date</th>
-            <th>Status</th>
-            <th>Delete</th>
-            <th>Edit</th>
-          </tr>
-        </thead>
-        <tbody id="todo-list">
-          
-        </tbody>
-      </table>
-      </div>
-    
+        <div class="">
+    <h1 class="text-4xl mb-4 underline">To-do List</h1>
+
+  <!-- Status Summary -->
+  <p id="summary" class="text-gray-500 mb-4">0 Total, 0 Completed, 0 Pending</p>
+
+  <!-- Input field and Add button -->
+  <div class="">
+    <input id="todo-input" type="text" placeholder="Add your task ..." class="p-2 border rounded-l-lg  text-lg focus:outline-none w-[350px]">
+    <button id="add-btn" class="bg-teal-500 text-white px-6 py-2 rounded-r-lg text-lg hover:bg-teal-600 focus:outline-none">
+        <i class="fa-solid fa-pencil"></i>
+    </button>
+  </div>
+
+  <!-- To-Do List Table -->
+  <table class="task-list w-full max-w-2xl text-lg">
+    <thead>
+      <tr class="text-left font-bold border-b">
+        <th>Num</th>
+        <th>Task</th>
+        <th>Date</th>
+        <th>Status</th>
+        <th>Delete</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+    <tbody id="todo-list">
+      <!-- Dynamic tasks will be appended here -->
+    </tbody>
+  </table>
+  </div>
+
     <script src="script.js"></script>
 </body>
 
