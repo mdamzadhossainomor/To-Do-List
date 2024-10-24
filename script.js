@@ -101,4 +101,20 @@ function addTodoItem(taskText) {
         }
       });
     });
-    editCell.appendChild(editBtn);}
+    editCell.appendChild(editBtn);
+     
+  listItem.appendChild(numCell);
+  listItem.appendChild(taskCell);
+  listItem.appendChild(dateCell);
+  listItem.appendChild(statusCell);
+  listItem.appendChild(deleteCell);
+  listItem.appendChild(editCell);
+
+ 
+  todoList.appendChild(listItem);
+}
+
+function updateSummary() {
+  const pendingTasks = totalTasks - completedTasks;
+  summary.textContent = `${totalTasks} Total, ${completedTasks} Completed, ${pendingTasks} Pending`;
+}
