@@ -41,5 +41,34 @@ function addTodoItem(taskText) {
   const dateCell = document.createElement('td');
   dateCell.textContent = date;
 
+  const statusCell = document.createElement('td');
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  checkbox.addEventListener('change', (e) => {
+    if (e.target.checked) {
+      listItem.classList.add('line-through');
+      completedTasks++;
+    } else {
+      listItem.classList.remove('line-through');
+      completedTasks--;
+    }
+    updateSummary();
+  });
+  statusCell.appendChild(checkbox);
+
+ 
+  const deleteCell = document.createElement('td');
+  const deleteBtn = document.createElement('button');
+  deleteBtn.innerHTML = `<i" class="fa-solid fa-trash-can"></i>`;
+  deleteBtn.classList.add('text-red-500', 'hover:text-red-700');
+  deleteBtn.addEventListener('click', () => {
+    listItem.remove();
+    totalTasks--;
+    if (checkbox.checked) {
+      completedTasks--;
+    }
+    updateSummary();
+  });
+  deleteCell.appendChild(deleteBtn);
 
 }
