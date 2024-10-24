@@ -30,4 +30,16 @@ function addTodoItem(taskText) {
   const numCell = document.createElement('td');
   numCell.textContent = todoCount;
 
+  
+  const taskCell = document.createElement('td');
+  const taskTextSpan = document.createElement('span');
+  taskTextSpan.textContent = taskText;
+  taskTextSpan.classList.add('task-text');
+  taskCell.appendChild(taskTextSpan);
+
+  
+  const dateCell = document.createElement('td');
+  dateCell.textContent = date;
+
+
 }
