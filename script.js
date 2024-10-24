@@ -16,8 +16,18 @@ addButton.addEventListener("click", () => {
 });
 
 function addTodoItem(taskText) {
+
+    todoCount++;
+  totalTasks++;
+  updateSummary();
+
   const now = new Date();
   const date = `${now.getDate()}/${now.getMonth() + 1}`;
 
   const listItem = document.createElement("tr");
+
+
+  const numCell = document.createElement('td');
+  numCell.textContent = todoCount;
+
 }
